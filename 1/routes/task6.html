@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Форма заказа</title>
+</head>
+<body>
+    <form>
+        <h3>Какое блюдо будете заказывать?</h3>
+        <label>
+            <input type="radio" name="food" value="pizza"> Пицца
+        </label><br>
+        <label>
+            <input type="radio" name="food" value="xor-dog" checked> Xor-дог
+        </label><br>
+        <label>
+            <input type="radio" name="food" value="burger"> Гамбургер
+        </label><br>
+        <label>
+            <input type="radio" name="food" value="popcorn"> Попкорн
+        </label><br>
+        <label>
+            <input type="radio" name="food" value="chupa"> Чупа-чупс
+        </label><br>
+        <button type="submit">Отправить</button>
+        <button type="reset">Сбросить</button>
+    </form>
+
+    <form>
+        <h3>Куда доставить заказ?</h3>
+        <label>Имя: <input type="text" name="first_name" required></label><br>
+        <label>Фамилия: <input type="text" name="last_name" required></label><br>
+        <label>eMail: 
+            <input type="text" name="username" placeholder="user">@
+            <select name="domain">
+                <option>mail.ru</option>
+                <option>rambler.ru</option>
+                <option>yandex.ru</option>
+                <option>tolpa.net</option>
+                <option>narod.ru</option>
+                <option>anekdotov.net</option>
+            </select>
+        </label><br>
+        <label>Улица: <input type="text" name="street" required></label><br>
+        <label>Город: <input type="text" name="city" required></label><br>
+        <button type="submit">Отправить</button>
+        <button type="reset">Сбросить</button>
+    </form>
+
+    <form>
+        <h3>Как будете расплачиваться?</h3>
+        <label><input type="radio" name="payment" value="cash"> Наличными</label><br>
+        <label><input type="radio" name="payment" value="check"> Чеком</label><br>
+        <label><input type="radio" name="payment" value="debit"> Дебитной картой</label><br>
+        
+        <h4>Кредитной карточкой</h4>
+        <label><input type="radio" name="card" value="mastercard"> MasterCard</label><br>
+        <label><input type="radio" name="card" value="visa"> Visa</label><br>
+        <label><input type="radio" name="card" value="discovery"> Discovery</label><br>
+        <label><input type="radio" name="card" value="amex"> American Express</label><br>
+        
+        <button type="submit">Отправить</button>
+        <button type="reset">Сбросить</button>
+    </form>
+</body>
+</html>

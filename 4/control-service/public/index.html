@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Закон Гука - Физика</title>
+    <link rel="stylesheet" href="src/style.css">
+</head>
+<body>
+    <div class="container">
+        <section class="block">
+            <div class="block-header">
+                <h2>Теория</h2>
+            </div>
+            <div class="content">
+                <h1 class="lesson-title">Закон Гука</h1>
+                
+                <p>В 1660 году английский ученый <span class="term-en">Robert Hooke</span> открыл 
+                фундаментальный закон упругости, известный как <strong>закон Гука</strong>.</p>
+                
+                <div class="definition">
+                    <p>Формулировка закона:</p>
+                    <p>Сила упругости, возникающая при деформации тела, 
+                    пропорциональна его удлинению и направлена 
+                    противоположно направлению смещения частиц.</p>
+                </div>
+
+                <img src="https://isopromat.ru/wp-content/uploads/zakon-guka-3.png" 
+                     alt="Схема закона Гука">
+                <p class="image-caption">Рис.1. Графическое представление закона Гука</p>
+
+                <p>Математическая запись закона: 
+                <img src="https://latex.codecogs.com/png.latex?F%20%3D%20-kx" 
+                     alt="Формула закона Гука" class="formula"></p>
+            </div>
+        </section>
+
+        <section class="block">
+            <div class="block-header">
+                <h2>Эксперимент</h2>
+            </div>
+            <div class="content">
+                <div class="controls">
+                    <div class="form-group">
+                        <label>Жесткость (k): <span id="kValue">100</span> Н/м</label>
+                        <input type="range" id="k" min="1" max="500" value="100" class="slider">
+                    </div>
+                    <div class="form-group">
+                        <label>Сила (F): <span id="fValue">50</span> Н</label>
+                        <input type="range" id="f" min="1" max="500" value="50" class="slider">
+                    </div>
+                </div>
+                
+                <div class="spring-system">
+                    <div class="spring-container">
+                        <div class="spring-body">
+                            <div class="spring"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="block">
+            <div class="block-header">
+                <h2>Тест</h2>
+            </div>
+            <div class="content">
+                <form id="testForm" onsubmit="return checkTest(event)">
+                    <div class="question">
+                        <p>1. Что описывает закон Гука?</p>
+                        <label><input type="radio" name="q1" value="a"> Тепловое расширение</label>
+                        <label><input type="radio" name="q1" value="b"> Упругую деформацию</label>
+                        <label><input type="radio" name="q1" value="c"> Электрическое поле</label>
+                    </div>
+
+                    <div class="question">
+                        <p>2. Запишите формулу закона Гука:</p>
+                        <input type="text" placeholder="Введите формулу" id="q2">
+                    </div>
+
+                    <div class="question">
+                        <p>3. Выберите верные утверждения:</p>
+                        <label><input type="checkbox" name="q3" value="a"> Сила пропорциональна удлинению</label>
+                        <label><input type="checkbox" name="q3" value="b"> Коэффициент k - масса тела</label>
+                        <label><input type="checkbox" name="q3" value="c"> Направление силы противоположно смещению</label>
+                    </div>
+
+                    <button type="submit">Проверить</button>
+                </form>
+                <div id="testResult"></div>
+            </div>
+        </section>
+    </div>
+
+    <script src="src/script.js"></script>
+</body>
+</html>

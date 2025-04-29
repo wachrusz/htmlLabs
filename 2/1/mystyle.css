@@ -1,0 +1,64 @@
+p {
+    color: green;
+}
+
+p.colortext {
+    color: red;
+}
+
+#main {
+    color: blue;
+}
+
+h1 {
+    font-family: Arial, sans-serif;
+    font-weight: bold;
+}
+
+
+body {
+    background-color: #f0f0f0;
+}
+
+div[student="yes"] {
+    background-image: url('image.jpg');
+    background-size: cover;
+}
+
+p.colortext {
+    margin: 20px;
+}
+
+h1 {
+    margin-left: auto;
+    margin-right: auto;
+    width: fit-content;
+}
+
+#main {
+    padding-left: 25px;
+}
+
+div {
+    width: 300px;
+    height: 300px;
+}
+
+div div {
+    width: 150px;
+    height: 150px;
+    background-color: lightblue;
+}
+
+a:link {
+    color: purple;
+}
+a:visited {
+    color: orange;
+}
+a:hover {
+    color: pink;
+}
+a:active {
+    color: red;
+}

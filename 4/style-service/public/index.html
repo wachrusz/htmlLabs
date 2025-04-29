@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>CSS Editor</title>
+    <style>
+        .container {
+            max-width: 1000px;
+            margin: 2rem auto;
+            padding: 0 20px;
+            font-family: Arial, sans-serif;
+        }
+        
+        .editor-panel {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1rem;
+            margin: 2rem 0;
+            padding: 1rem;
+            background: #f5f5f5;
+            border-radius: 8px;
+        }
+        
+        .tag-control {
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+        }
+        
+        textarea {
+            width: 100%;
+            height: 150px;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            resize: vertical;
+        }
+        
+        #preview {
+            min-height: 200px;
+            padding: 20px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            margin-top: 1rem;
+        }
+        
+        button {
+            background: #28a745;
+            color: white;
+            border: none;
+            padding: 12px 24px;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: opacity 0.3s;
+        }
+        
+        button:hover {
+            opacity: 0.9;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <textarea id="input" placeholder="Введите текст с тегами (<b>, <i>, <u>, <custom>)..."></textarea>
+        
+        <div class="editor-panel">
+            <div class="tag-control" data-tag="b">
+                <h3>Настройки для &lt;b&gt;</h3>
+                <input type="color" class="color">
+                <input type="number" class="font-size" placeholder="Размер шрифта (px)">
+                <label><input type="checkbox" class="bold"> Жирный</label>
+            </div>
+            
+            <div class="tag-control" data-tag="i">
+                <h3>Настройки для &lt;i&gt;</h3>
+                <input type="color" class="color">
+                <input type="number" class="font-size" placeholder="Размер шрифта (px)">
+                <label><input type="checkbox" class="italic"> Курсив</label>
+            </div>
+            
+            <div class="tag-control" data-tag="u">
+                <h3>Настройки для &lt;u&gt;</h3>
+                <input type="color" class="color">
+                <select class="underline-style">
+                    <option value="solid">Сплошная</option>
+                    <option value="dotted">Точечная</option>
+                    <option value="dashed">Пунктир</option>
+                </select>
+            </div>
+            
+            <div class="tag-control" data-tag="custom">
+                <h3>Настройки для &lt;custom&gt;</h3>
+                <input type="color" class="color">
+                <input type="text" class="custom-style" placeholder="Доп. стили (CSS)">
+            </div>
+        </div>
+        
+        <button onclick="applyStyles()">Применить стили</button>
+        <div id="preview"></div>
+    </div>
+
+    <script src="src/script.js"></script>
+</body>
+</html>

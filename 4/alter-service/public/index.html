@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Управление таблицей</title>
+    <style>
+        .container {
+            max-width: 800px;
+            margin: 2rem auto;
+            padding: 0 1rem;
+        }
+        
+        .form-group {
+            margin-bottom: 1rem;
+        }
+        
+        input {
+            padding: 8px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            width: 200px;
+        }
+        
+        button {
+            background: #007bff;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 2rem;
+        }
+        
+        th, td {
+            padding: 12px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+        
+        th {
+            background-color: #f8f9fa;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <form id="addForm">
+            <div class="form-group">
+                <input type="text" id="name" placeholder="Имя" required>
+            </div>
+            <div class="form-group">
+                <input type="number" id="age" placeholder="Возраст" required>
+            </div>
+            <div class="form-group">
+                <input type="email" id="email" placeholder="Email" required>
+            </div>
+            <button type="submit">Добавить</button>
+        </form>
+        
+        <table>
+            <thead>
+                <tr>
+                    <th>Имя</th>
+                    <th>Возраст</th>
+                    <th>Email</th>
+                </tr>
+            </thead>
+            <tbody id="tableBody"></tbody>
+        </table>
+    </div>
+
+    <script src="src/script.js"></script>
+</body>
+</html>

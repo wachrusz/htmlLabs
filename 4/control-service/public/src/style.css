@@ -1,0 +1,226 @@
+/* Базовые стили */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Стили блоков */
+.block {
+    margin: 30px 0;
+    border-radius: 10px;
+    box-shadow: 0 2px 15px rgba(0,0,0,0.1);
+    overflow: hidden;
+}
+
+.block-header {
+    background: #2ecc71;
+    color: white;
+    padding: 15px;
+}
+
+.block-header h2 {
+    margin: 0;
+    font-weight: 500;
+}
+
+.content {
+    padding: 25px;
+    background: white;
+}
+
+/* Теоретический блок */
+.lesson-title {
+    color: #3498db;
+    font-size: 22px;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+.definition {
+    border: 2px solid #3498db;
+    border-radius: 8px;
+    padding: 15px;
+    margin: 20px 0;
+    background: #f8f9fa;
+}
+
+img {
+    display: block;
+    max-width: 80%;
+    height: auto;
+    margin: 20px auto;
+    border-radius: 8px;
+}
+
+.image-caption {
+    color: #e67e22;
+    font-style: italic;
+    font-size: 12px;
+    text-align: center;
+    margin-top: -15px;
+}
+
+.formula {
+    vertical-align: middle;
+    margin: 0 5px;
+}
+
+.term-en {
+    color: #27ae60;
+    font-weight: 500;
+}
+
+strong {
+    font-weight: bold;
+}
+
+/* Эксперимент */
+.spring-system {
+    margin: 40px 0;
+    padding: 20px;
+    background: #f8f9fa;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.spring-container {
+    position: relative;
+    height: 100px;
+}
+
+.spring-body {
+    position: absolute;
+    left: 20px;
+    right: 20px;
+    top: 40px;
+    height: 20px;
+}
+
+.spring {
+    width: 100%;
+    height: 100%;
+    background: #7f8c8d;
+    border-radius: 4px;
+    transform-origin: left center;
+    transition: transform 0.3s linear;
+}
+
+.weight {
+    width: 40px;
+    height: 40px;
+    background: #e74c3c;
+    border-radius: 50%;
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    transition: left 0.3s linear;
+    will-change: left;
+}
+
+.slider {
+    width: 100%;
+    margin: 10px 0;
+    transition: opacity 0.2s;
+}
+
+.slider:active {
+    opacity: 0.8;
+}
+
+.controls {
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+/* Формы и кнопки */
+.form-group {
+    margin: 15px 0;
+}
+
+input[type="number"] {
+    padding: 8px;
+    width: 150px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+button {
+    background: #3498db;
+    color: white;
+    border: none;
+    padding: 12px 25px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+button:hover {
+    background: #2980b9;
+}
+
+/* Тест */
+.question {
+    margin: 20px 0;
+    padding: 15px;
+    background: #f8f9fa;
+    border-radius: 8px;
+}
+
+#testResult {
+    margin: 20px 0;
+    padding: 15px;
+    font-weight: bold;
+}
+
+/* Адаптивность */
+@media (max-width: 768px) {
+    .container {
+        padding: 10px;
+    }
+    
+    img {
+        max-width: 100%;
+    }
+    
+    .form-group {
+        display: flex;
+        flex-direction: column;
+    }
+    
+    input[type="number"] {
+        width: 100%;
+    }
+
+    .horizontal-spring-container {
+        height: 150px;
+        padding: 15px 0;
+    }
+
+    .spring {
+        width: 200px;
+    }
+
+    .experiment-block {
+        width: 50px;
+        height: 50px;
+    }
+
+    .weight {
+        width: 35px;
+        height: 35px;
+    }
+}
+
+.experiment-block,
+.weight {
+    will-change: transform; /* Подсказка браузеру, что будет анимация */
+    position: relative; /* Обязательно — чтобы transform работал */
+}

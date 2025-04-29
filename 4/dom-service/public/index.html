@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Тест-опросник</title>
+    <style>
+        .question { display: none; }
+        .question.active { display: block; }
+        #result, #restart-btn { display: none; margin-top: 20px; }
+        .options label { margin-right: 10px; }
+        button { margin-top: 10px; padding: 5px 15px; }
+        .error { color: red; margin-top: 10px; }
+    </style>
+</head>
+<body>
+    <div id="questions-container"></div>
+    <div id="error-message" class="error"></div>
+    <button id="next-btn">Следующий вопрос</button>
+    <div id="result"></div>
+    <button id="restart-btn">Пройти заново</button>
+
+    <script src="src/script.js"></script>
+</body>
+</html>

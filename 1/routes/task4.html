@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Верстка таблиц</title>
+    <style>
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        th, td {
+            padding: 8px;
+            text-align: center;
+            border: 1px solid black;
+            width: var(--cell-width, auto);
+            height: 20px;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+
+        .no-border-vertical { 
+            border-top: none; 
+            border-bottom: none; 
+        }
+
+        .no-border-top { 
+            border-top: none; 
+        }
+
+        .no-border-bottom { 
+            border-bottom: none; 
+        }
+    </style>
+</head>
+<body>
+    <h1>Таблица с настраиваемыми границами</h1>
+    <table>
+        <tr>
+            <td style="--cell-width: 8%;"></td>
+            <td style="--cell-width: 40%;" class="no-border-bottom"></td>
+            <td colspan="2" style="--cell-width: 18%;"></td>
+            <td style="--cell-width: 18%;"></td>
+            <td style="--cell-width: 18%;" class="no-border-bottom"></td>
+        </tr>
+        <tr>
+            <td class="no-border-vertical"></td>
+            <td class="no-border-vertical"></td>
+            <td class="no-border-vertical"></td>
+            <td class="no-border-vertical"></td>
+            <td class="no-border-vertical"></td>
+            <td class="no-border-vertical"></td>
+        </tr>
+        <tr>
+            <td class="no-border-vertical"></td>
+            <td class="no-border-top"></td>
+            <td class="no-border-vertical"></td>
+            <td class="no-border-vertical"></td>
+            <td class="no-border-vertical"></td>
+            <td class="no-border-vertical"></td>
+        </tr>
+        <tr>
+            <td class="no-border-top"></td>
+            <td></td>
+            <td class="no-border-top"></td>
+            <td class="no-border-top"></td>
+            <td></td>
+            <td class="no-border-top"></td>
+        </tr>
+    </table>
+    <p><a href="../index.html">Вернуться на главную</a></p>
+</body>
+</html>

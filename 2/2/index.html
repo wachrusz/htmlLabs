@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Онлайн библиотека</title>
+    <link rel="stylesheet" href="public/style.css">
+</head>
+<body>
+    <header class="header">
+        <div class="logo">Библиотека</div>
+        <nav class="nav-menu">
+            <ul>
+                <li><a href="#">Главная</a></li>
+                <li><a href="#">Каталог</a></li>
+                <li><a href="#">Мои книги</a></li>
+                <li><a href="#">Профиль</a></li>
+            </ul>
+        </nav>
+        <div class="burger-menu" id="burgerMenu">☰</div>
+        <div class="mobile-menu" id="mobileMenu">
+            <ul>
+                <li><a href="#">Главная</a></li>
+                <li><a href="#">Каталог</a></li>
+                <li><a href="#">Мои книги</a></li>
+                <li><a href="#">Профиль</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <div class="main-container">
+        <div class="books-layout">
+            <div class="book-detail">
+                <div class="book-detail-cover">
+                    <img src="public/images/1984.jpg" alt="1984" class="book-cover-img">
+                </div>
+                <h1 class="book-detail-title">1984</h1>
+                <div class="book-detail-author">Джордж Оруэлл</div>
+                <div class="book-detail-meta">
+                    <p><strong>Год:</strong> 1949</p>
+                    <p><strong>Жанр:</strong> Антиутопия</p>
+                    <p><strong>Рейтинг:</strong> ★★★★★</p>
+                </div>
+                <p class="book-detail-description">
+                    "1984" - культовый роман-антиутопия Джорджа Оруэлла, изображающий тоталитарное общество, 
+                    где правительство осуществляет тотальный контроль над всеми аспектами жизни граждан. 
+                    Главный герой, Уинстон Смит, работает в Министерстве правды, где занимается фальсификацией 
+                    исторических документов, но втайне мечтает о свободе и восстании против системы.
+                </p>
+                <a href="#" class="read-btn">Читать онлайн</a>
+            </div>
+            
+            <div class="books-sidebar">
+                <div class="book-card">
+                    <img src="public/images/bulg.webp" alt="Преступление и наказание" class="book-sidebar-cover">
+                    <h3 class="book-title">Преступление и наказание</h3>
+                    <div class="book-author">Фёдор Достоевский</div>
+                    <a href="#" class="read-btn">Читать</a>
+                    <div style="clear: both;"></div>
+                </div>
+                
+                <div class="book-card">
+                    <img src="public/images/dost.jpg" alt="Мастер и Маргарита" class="book-sidebar-cover">
+                    <h3 class="book-title">Мастер и Маргарита</h3>
+                    <div class="book-author">Михаил Булгаков</div>
+                    <a href="#" class="read-btn">Читать</a>
+                    <div style="clear: both;"></div>
+                </div>
+
+                <div class="book-card">
+                    <img src="public/images/tolst.jpg" alt="Война и мир" class="book-sidebar-cover">
+                    <h3 class="book-title">Война и мир</h3>
+                    <div class="book-author">Лев Толстой</div>
+                    <a href="#" class="read-btn">Читать</a>
+                    <div style="clear: both;"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        document.getElementById('burgerMenu').addEventListener('click', function() {
+            const mobileMenu = document.getElementById('mobileMenu');
+            if (mobileMenu.style.display === 'block') {
+                mobileMenu.style.display = 'none';
+            } else {
+                mobileMenu.style.display = 'block';
+            }
+        });
+    </script>
+</body>
+</html>

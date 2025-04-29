@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Верстка таблиц</title>
+    <style>
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        th, td {
+            padding: 8px;
+            text-align: center;
+            border: 1px solid black;
+            width: var(--cell-width, auto);
+            height: 20px;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+    </style>
+</head>
+<body>
+    <h1>ТАбличная верстка</h1>
+    <table>
+        <tr>
+            <td colspan="4">3D Studio Max 5</td>
+        </tr>
+        <tr>
+            <td style="--cell-width: 10%;">Main Plain</td>
+            <td  style="--cell-width: 40%;">For who is it</td>
+            <td  style="--cell-width: 40%;"></td>
+            <td  style="--cell-width: 10%;">Additional</td>
+        </tr>
+        <tr>
+            <td>About</td>
+            <td>THIS IS A PLAIN TEXT THIS IS A PLAIN TEXT THIS IS A PLAIN TEXT THIS IS A PLAIN TEXT</td>
+            <td></td>
+            <td>THIS IS A PLAIN TEXT THIS IS A PLAIN TEXT THIS IS A PLAIN TEXT THIS IS A PLAIN TEXT</td>
+        </tr>
+        <tr>
+            <td>Segments</td>
+            <td>THIS IS A PLAIN TEXT THIS IS A PLAIN TEXT THIS IS A PLAIN TEXT THIS IS A PLAIN TEXT</td>
+            <td></td>
+            <td>THIS IS A PLAIN TEXT THIS IS A PLAIN TEXT THIS IS A PLAIN TEXT THIS IS A PLAIN TEXT</td>
+        </tr>
+        <tr>
+            <td></td>
+            <td>SEGMENTS OF A BOOK</td>
+            <td>SEGMENTS OF A BOOK</td>
+            <td>THIS IS A PLAIN TEXT THIS IS A PLAIN TEXT THIS IS A PLAIN TEXT THIS IS A PLAIN TEXT</td>
+        </tr>
+        <tr>
+            <td></td>
+            <td>SEGMENTS OF A BOOK</td>
+            <td>SEGMENTS OF A BOOK</td>
+            <td>THIS IS A PLAIN TEXT THIS IS A PLAIN TEXT THIS IS A PLAIN TEXT THIS IS A PLAIN TEXT</td>
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td>THIS IS A PLAIN TEXT THIS IS A PLAIN TEXT THIS IS A PLAIN TEXT THIS IS A PLAIN TEXT</td>
+        </tr>
+    </table>
+    <p><a href="../index.html">Вернуться на главную</a></p>
+</body>
+</html>
